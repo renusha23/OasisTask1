@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>calculator</title>
+<style>
+    .opt{
+        width:100%;
+        height:100%;
+        border-radius:50%;
+        background-color:#B3AFB0;  
+        font-size:20px;
+    }
+    .jj{
+        border-color:#E4D4C5;
+       border-style:solid;
+        width:30%;
+        height:40%;
+        
+    }
+    .vi{
+        color:#B2A199;
+        background-color: beige;
+        font-size: 40;
+        font-family:'Times New Roman';
+    }
+    
+
+</style>
+<script>
+function clearll(){
+document.getElementById("cl").value =  "";
+document.getElementById("re").value = "";
+}
+function ev(input){
+document.getElementById("cl").value+=input;
+}
+function out(){
+document.getElementById("re").value=eval(document.getElementById("cl").value);
+}
+
+</script>
+</head>
+<body><center>
+<h1>OASIS INFOBYTE</h1>
+<h1>TASK 1</h1>
+<div><h1 class="vi">CALCULATOR</h1></div>
+<table border=10 class="jj">
+    <tr>
+        <td colspan="4"><input type="text" placeholder="enter the number" id="cl" value="" style="width:100%;height:90%;font-size:30px;"></td>
+        </tr>
+        <tr>
+        <td colspan="4"><input type="text" placeholder="result" id="re" value=""style="width:100%;height:90%;font-size:30px;"></td>
+        </tr>
+<tr>
+<td><input type="button"  class="opt" value="7" onclick="return ev('7');"></td>
+<td><input type="button" class="opt" value="8" onclick="return ev('8');"></td>
+<td><input type="button" class="opt" value="9" onclick="return ev('9');"></td>
+<td><input type="button" class="opt" value="X" onclick="return ev('*');"></td>
+</tr>
+
+<tr>
+<td><input type="button" class="opt" value="4" onclick="return ev('4');"></td>
+<td><input type="button" class="opt" value="5" onclick="return ev('5');"></td>
+<td><input type="button" class="opt"value="6" onclick="return ev('6');"></td>
+<td><input type="button" class="opt" value="-" onclick="return ev('-');"></td>
+</tr>
+
+<tr>
+<td><input type="button" class="opt" value="1" onclick="return ev('1');"></td>
+<td><input type="button" class="opt" value="2" onclick="return ev('2');"></td>
+<td><input type="button" class="opt" value="3" onclick="return ev('3');"></td>
+<td><input type="button" class="opt" value="+" onclick="return ev('+');"></td>
+</tr>
+
+
+<tr>
+<td><input type="button" class="opt" value="." onclick="return ev('.');"></td>
+<td><input type="button" class="opt" value="0" onclick="return ev('0');"></td>
+
+<td><input type="button" class="opt" value="=" onclick="return out();"></td>
+<td><input type="button" class="opt" value="/" onclick="return ev('/');"></td>
+</tr>
+<tr>
+<td colspan="2"><input type="button" class="opt" value="AC" onclick="return clearll();"></td></tr>
+
+</table>
+</center>
+</body>
+</html>
